@@ -11,7 +11,7 @@ public class App
             @Override
             public void run() {
                 LoginWindow frame = new LoginWindow();
-                frame.setSize(200, 200);
+                frame.setSize(500, 600);
                 frame.setResizable(false);
                 frame.setLocationRelativeTo(null);
             }
