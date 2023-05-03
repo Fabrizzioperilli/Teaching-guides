@@ -63,7 +63,7 @@ public class LoginWindow extends JFrame implements ActionListener {
 
     }
 
-    private boolean authentication(final String user, final String password) {
+    public boolean authentication(final String user, final String password) {
         try {
             Connection connection = DriverManager.getConnection(ROUTE_DB);
             PreparedStatement sqlQuery = connection.prepareStatement("SELECT * FROM user WHERE username = ? AND password = ?");
