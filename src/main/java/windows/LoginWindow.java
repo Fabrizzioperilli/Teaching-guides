@@ -7,6 +7,7 @@ import java.awt.Color;
 import java.awt.Font;
 import java.sql.*;
 
+
 public class LoginWindow extends JFrame implements ActionListener {
 
     private JLabel userLabel;
@@ -14,10 +15,11 @@ public class LoginWindow extends JFrame implements ActionListener {
     private JTextField userTextField;
     private JPasswordField passwordUserField;
     private JLabel logoUll;
-    private final String ROUTE_ICON = "resources/images/icon-ull-original.png";
-    private final String ROUTE_LOGO = "resources/images/logo-ull.png";
-    private final String ROUTE_DB = "jdbc:sqlite:db_teaching_guides.db";
     private JButton aceptButton;
+    private int permissionUser;
+    private String name;
+
+
 
 
     public LoginWindow() {
@@ -26,8 +28,10 @@ public class LoginWindow extends JFrame implements ActionListener {
         setVisible(true);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         getContentPane().setBackground(new Color(92, 6, 140));
+        final String ROUTE_ICON = "resources/images/icon-ull-original.png";
         setIconImage(new ImageIcon(ROUTE_ICON).getImage());
 
+        final String ROUTE_LOGO = "resources/images/logo-ull.png";
         logoUll = new JLabel(new ImageIcon(ROUTE_LOGO));
         logoUll.setBounds(25, 5, 450, 200);
         add(logoUll);
@@ -65,13 +69,16 @@ public class LoginWindow extends JFrame implements ActionListener {
 
     public boolean authentication(final String user, final String password) {
         try {
+            final String ROUTE_DB = "jdbc:sqlite:db_teaching_guides.db";
             Connection connection = DriverManager.getConnection(ROUTE_DB);
-            PreparedStatement sqlQuery = connection.prepareStatement("SELECT * FROM user WHERE username = ? AND password = ?");
+            PreparedStatement sqlQuery = connection.prepareStatement("SELECT * FROM teacher WHERE username = ? AND password = ?");
             sqlQuery.setString(1, user);
             sqlQuery.setString(2, password);
 
             ResultSet resultSet = sqlQuery.executeQuery();
             boolean authenticated = resultSet.next();
+            permissionUser = resultSet.getInt("permission");
+            name = resultSet.getString("name");
             resultSet.close();
             sqlQuery.close();
             connection.close();
@@ -91,14 +98,18 @@ public class LoginWindow extends JFrame implements ActionListener {
             if (user.equals("") || password.equals(""))
                 JOptionPane.showMessageDialog(null, "Complete los campos");
             else {
-                if (authentication(user, password))
-                    System.out.println("Valid User");
-                else
-                    System.out.println("Invalid User");
+                if (authentication(user, password)) {
+                    System.out.println("Valid User, permissions user = " + permissionUser  );
+
+                    this.setVisible(false);
+                    MenuWindow menuWindow = new MenuWindow(name, permissionUser);
+                    menuWindow.setSize(500, 450);
+                    menuWindow.setResizable(false);
+                    menuWindow.setLocationRelativeTo(null);
+                } else {
+                    JOptionPane.showMessageDialog(null, "Usuario incorrecto");
+                }
             }
         }
-
     }
-
-
 }
