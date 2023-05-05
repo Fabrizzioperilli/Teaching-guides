@@ -7,12 +7,11 @@ import java.awt.event.ActionListener;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Vector;
 import javax.swing.JComboBox;
-import javax.swing.table.DefaultTableModel;
 
 
-public class MenuWindow extends JFrame implements ActionListener {
+
+public class Menu extends JFrame implements ActionListener {
 
     private int permissionUser;
     private String userName;
@@ -25,7 +24,7 @@ public class MenuWindow extends JFrame implements ActionListener {
 
 
 
-    public MenuWindow(String userName, int permissionUser) {
+    public Menu(String userName, int permissionUser) {
         super("Menu");
         setLayout(null);
         setVisible(true);
@@ -108,7 +107,7 @@ public class MenuWindow extends JFrame implements ActionListener {
         }
         List<String> subjects  = getSubjectList();
         subjetsComboBox = new JComboBox(subjects.toArray());
-        subjetsComboBox.setBounds(180, 300, 140, 30);
+        subjetsComboBox.setBounds(150, 300, 180, 30);
         subjetsComboBox.insertItemAt("", 0);
         subjetsComboBox.setSelectedIndex(0);
         add(subjetsComboBox);
@@ -119,13 +118,17 @@ public class MenuWindow extends JFrame implements ActionListener {
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() == itemMenuBack) {
             this.setVisible(false);
-            LoginWindow loginWindow = new LoginWindow();
-            loginWindow.setSize(500, 600);
-            loginWindow.setResizable(false);
-            loginWindow.setLocationRelativeTo(null);
+            Login login = new Login();
+            login.setSize(500, 600);
+            login.setResizable(false);
+            login.setLocationRelativeTo(null);
         }
         if (e.getSource() == itemMenuExit) {
             System.exit(0);
+        }
+        if (e.getSource() == usersButton) {
+            TableUsers tableUsers = new TableUsers();
+
         }
         if (e.getSource() == searchButton) {
             subjetsComboBox.setVisible(true);
@@ -172,9 +175,9 @@ public class MenuWindow extends JFrame implements ActionListener {
 
             rs = stmt.executeQuery();
 
-            JFrame resultsFrame = new JFrame("Resultados de la consulta");
+            JFrame resultsFrame = new JFrame("Guia docente (" + selectedSubject + ")");
             resultsFrame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-            resultsFrame.setSize(800, 400);
+            resultsFrame.setSize(1000, 700);
             resultsFrame.setLocationRelativeTo(null);
             resultsFrame.setResizable(false);
             final String ROUTE_ICON = "resources/images/icon-ull-original.png";
@@ -198,7 +201,6 @@ public class MenuWindow extends JFrame implements ActionListener {
                     resultsTextArea.append("---- "+ columnName + " ----\n");
                     resultsTextArea.append(rs.getObject(columnIndex) + "\n\n\n");
                 }
-                resultsTextArea.append("\n");
             }
             resultsTextArea.setFont((new Font("sans-serif", Font.PLAIN, 16)));
 
@@ -207,7 +209,6 @@ public class MenuWindow extends JFrame implements ActionListener {
             ex.printStackTrace();
         } finally {
             try {
-                // Cerrar la conexión a la base de datos
                 if (rs != null) rs.close();
                 if (stmt != null) stmt.close();
                 if (conn != null) conn.close();

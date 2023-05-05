@@ -1,5 +1,5 @@
 package org.app;
-import windows.LoginWindow;
+import windows.Login;
 import javax.swing.SwingUtilities;
 
 
@@ -10,7 +10,7 @@ public class App
         SwingUtilities.invokeLater(new Runnable() {
             @Override
             public void run() {
-                LoginWindow frame = new LoginWindow();
+                Login frame = new Login();
                 frame.setSize(500, 600);
                 frame.setResizable(false);
                 frame.setLocationRelativeTo(null);

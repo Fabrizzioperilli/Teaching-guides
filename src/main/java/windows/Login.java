@@ -8,7 +8,7 @@ import java.awt.Font;
 import java.sql.*;
 
 
-public class LoginWindow extends JFrame implements ActionListener {
+public class Login extends JFrame implements ActionListener {
 
     private JLabel userLabel;
     private JLabel passwordLabel;
@@ -22,7 +22,7 @@ public class LoginWindow extends JFrame implements ActionListener {
 
 
 
-    public LoginWindow() {
+    public Login() {
         super("Acceso");
         setLayout(null);
         setVisible(true);
@@ -102,10 +102,10 @@ public class LoginWindow extends JFrame implements ActionListener {
                     System.out.println("Valid User, permissions user = " + permissionUser  );
 
                     this.setVisible(false);
-                    MenuWindow menuWindow = new MenuWindow(name, permissionUser);
-                    menuWindow.setSize(500, 450);
-                    menuWindow.setResizable(false);
-                    menuWindow.setLocationRelativeTo(null);
+                    Menu menu = new Menu(name, permissionUser);
+                    menu.setSize(500, 450);
+                    menu.setResizable(false);
+                    menu.setLocationRelativeTo(null);
                 } else {
                     JOptionPane.showMessageDialog(null, "Usuario incorrecto");
                 }
