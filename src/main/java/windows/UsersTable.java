@@ -9,13 +9,13 @@ import javax.swing.table.DefaultTableModel;
 import javax.swing.*;
 import java.awt.*;
 
-public class TableUsers extends JFrame {
+public class UsersTable extends JFrame {
 
-    public TableUsers() {
+    public UsersTable() {
         super("Usuarios del sistema");
         setLayout(null);
         setVisible(true);
-        setSize(620, 370);
+        setSize(620, 360);
         setLocationRelativeTo(null);
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         getContentPane().setBackground(new Color(92, 6, 140));
@@ -34,6 +34,7 @@ public class TableUsers extends JFrame {
             rs = stmt.executeQuery("SELECT * FROM teacher");
 
             JTable table = new JTable(buildTableModel(rs));
+            table.setEnabled(false);
             JScrollPane scrollPane = new JScrollPane(table);
             scrollPane.setBounds(17, 10, 570, 300);
             add(scrollPane);

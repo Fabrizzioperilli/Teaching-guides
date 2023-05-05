@@ -18,6 +18,8 @@ public class Login extends JFrame implements ActionListener {
     private JButton aceptButton;
     private int permissionUser;
     private String name;
+    private String user;
+
 
 
 
@@ -76,9 +78,12 @@ public class Login extends JFrame implements ActionListener {
             sqlQuery.setString(2, password);
 
             ResultSet resultSet = sqlQuery.executeQuery();
+
             boolean authenticated = resultSet.next();
-            permissionUser = resultSet.getInt("permission");
-            name = resultSet.getString("name");
+            this.permissionUser = resultSet.getInt("permission");
+            this.user = resultSet.getString("username");
+            this.name = resultSet.getString("name");
+
             resultSet.close();
             sqlQuery.close();
             connection.close();
@@ -102,8 +107,8 @@ public class Login extends JFrame implements ActionListener {
                     System.out.println("Valid User, permissions user = " + permissionUser  );
 
                     this.setVisible(false);
-                    Menu menu = new Menu(name, permissionUser);
-                    menu.setSize(500, 450);
+                    Menu menu = new Menu(user ,name, permissionUser);
+                    menu.setSize(500, 475);
                     menu.setResizable(false);
                     menu.setLocationRelativeTo(null);
                 } else {
