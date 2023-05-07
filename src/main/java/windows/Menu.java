@@ -1,3 +1,9 @@
+/**
+ * @file Menu.java
+ * @author Fabrizzio Daniell Perilli Martin alu0101138589@ull.edu.es
+ * @version 1.0
+ * @date 2023-05-07
+ */
 package windows;
 
 import javax.swing.*;
@@ -10,20 +16,29 @@ import java.util.List;
 import javax.swing.JComboBox;
 
 
+/**
+ * The type Menu.
+ */
 public class Menu extends JFrame implements ActionListener {
 
-    private int permissionUser;
-    private String userName;
-    private int idSubject;
-    private JButton modifyButton;
-    private JButton usersButton;
-    private JButton searchButton;
-    private JMenuItem itemMenuBack;
-    private JMenuItem itemMenuExit;
-    private JComboBox subjetsComboBox;
-    private JComboBox subjetsEditableComboBox;
+    private final String userName;
+
+    private final JButton modifyButton;
+    private final JButton usersButton;
+    private final JButton searchButton;
+    private final JMenuItem itemMenuBack;
+    private final JMenuItem itemMenuExit;
+    private final JComboBox subjetsComboBox;
+    private final JComboBox subjetsEditableComboBox;
 
 
+    /**
+     * Instantiates a new Menu.
+     *
+     * @param userName       the user name
+     * @param name           the name
+     * @param permissionUser the permission user
+     */
     public Menu(String userName, String name, int permissionUser) {
         super("Menu");
         setLayout(null);
@@ -37,21 +52,20 @@ public class Menu extends JFrame implements ActionListener {
         setJMenuBar(menuBar);
 
         JMenu menuOptions = new JMenu("Opciones");
-        menuOptions.setFont(new Font("Andale Mono", 1, 14));
+        menuOptions.setFont(new Font("Andale Mono", Font.BOLD, 14));
         menuBar.add(menuOptions);
 
         itemMenuBack = new JMenuItem("Volver");
-        itemMenuBack.setFont(new Font("Andale Mono", 1, 14));
+        itemMenuBack.setFont(new Font("Andale Mono", Font.BOLD, 14));
         menuOptions.add(itemMenuBack);
         itemMenuBack.addActionListener(this);
 
         itemMenuExit = new JMenuItem("Salir");
-        itemMenuExit.setFont(new Font("Andale Mono", 1, 14));
+        itemMenuExit.setFont(new Font("Andale Mono", Font.BOLD, 14));
         menuOptions.add(itemMenuExit);
         itemMenuExit.addActionListener(this);
 
         this.userName = userName;
-        this.permissionUser = permissionUser;
 
         JLabel welcomeUserLabel = new JLabel("Bienvenid@ " + name);
         welcomeUserLabel.setBounds(130, 50, 350, 30);
@@ -128,7 +142,10 @@ public class Menu extends JFrame implements ActionListener {
         }
     }
 
-
+    /**
+     * Content the actions of events
+     * @param e the event to be processed
+     */
     @Override
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() == itemMenuBack) {
@@ -158,6 +175,10 @@ public class Menu extends JFrame implements ActionListener {
         }
     }
 
+    /**
+     * This method return the list of subjects names
+     * @return List<String>
+     */
     private List<String> getSubjectList() {
         List<String> subjects = new ArrayList<String>();
         try {
@@ -179,6 +200,10 @@ public class Menu extends JFrame implements ActionListener {
         return subjects;
     }
 
+    /**
+     * This method return the list of subjects names editable
+     * @return List<String>
+     */
     private List<String> getSubjectListEditable() {
         List<String> subjects = new ArrayList<String>();
         try {

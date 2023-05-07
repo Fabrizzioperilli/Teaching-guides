@@ -1,4 +1,11 @@
+/**
+ * @file UsersTable.java
+ * @author Fabrizzio Daniell Perilli Martin alu0101138589@ull.edu.es
+ * @version 1.0
+ * @date 2023-05-07
+ */
 package windows;
+
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
@@ -9,8 +16,14 @@ import javax.swing.table.DefaultTableModel;
 import javax.swing.*;
 import java.awt.*;
 
+/**
+ * The type Users table.
+ */
 public class UsersTable extends JFrame {
 
+    /**
+     * Instantiates a new Users table.
+     */
     public UsersTable() {
         super("Usuarios del sistema");
         setLayout(null);
@@ -52,6 +65,13 @@ public class UsersTable extends JFrame {
         }
     }
 
+    /**
+     * Build table model default table model.
+     *
+     * @param rs the rs
+     * @return the default table model
+     * @throws SQLException the sql exception
+     */
     public static DefaultTableModel buildTableModel(ResultSet rs) throws SQLException {
         DefaultTableModel tableModel = new DefaultTableModel();
         int columnCount = rs.getMetaData().getColumnCount();
@@ -64,7 +84,7 @@ public class UsersTable extends JFrame {
         while (rs.next()) {
             Object[] row = new Object[columnCount];
             for (int i = 1; i <= columnCount; i++) {
-                row[i-1] = rs.getObject(i);
+                row[i - 1] = rs.getObject(i);
             }
             tableModel.addRow(row);
         }

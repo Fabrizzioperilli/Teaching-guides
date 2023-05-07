@@ -1,3 +1,11 @@
+/**
+ * @file LoginTest.java
+ * @author Fabrizzio Daniell Perilli Martin alu0101138589@ull.edu.es
+ * @version 1.0
+ * @date 2023-05-07
+ *
+ */
+
 package windows;
 
 import javax.swing.*;
@@ -7,19 +15,20 @@ import java.awt.Color;
 import java.awt.Font;
 import java.sql.*;
 
-
+/**
+ * The type Login.
+ */
 public class Login extends JFrame implements ActionListener {
 
-    private JLabel userLabel;
-    private JLabel passwordLabel;
-    private JTextField userTextField;
-    private JPasswordField passwordUserField;
-    private JLabel logoUll;
-    private JButton aceptButton;
+    private final JTextField userTextField;
+    private final JPasswordField passwordUserField;
+    private final JButton aceptButton;
     private int permissionUser;
     private String name;
-    private String user;
 
+    /**
+     * Instantiates a new Login.
+     */
     public Login() {
         super("Acceso");
         setLayout(null);
@@ -30,11 +39,11 @@ public class Login extends JFrame implements ActionListener {
         setIconImage(new ImageIcon(ROUTE_ICON).getImage());
 
         final String ROUTE_LOGO = "resources/images/logo-ull.png";
-        logoUll = new JLabel(new ImageIcon(ROUTE_LOGO));
+        JLabel logoUll = new JLabel(new ImageIcon(ROUTE_LOGO));
         logoUll.setBounds(25, 5, 450, 200);
         add(logoUll);
 
-        userLabel = new JLabel("Usuario: ");
+        JLabel userLabel = new JLabel("Usuario: ");
         userLabel.setBounds(90, 220, 100, 30);
         userLabel.setForeground(Color.WHITE);
         userLabel.setFont(new Font("sans-serif", Font.BOLD, 15));
@@ -45,7 +54,7 @@ public class Login extends JFrame implements ActionListener {
         userTextField.setFont(new Font("sans-serif", Font.BOLD, 14));
         add(userTextField);
 
-        passwordLabel = new JLabel("Contraseña: ");
+        JLabel passwordLabel = new JLabel("Contraseña: ");
         passwordLabel.setBounds(90, 300, 100, 30);
         passwordLabel.setForeground(Color.WHITE);
         passwordLabel.setFont(new Font("sans-serif", Font.BOLD, 15));
@@ -65,6 +74,13 @@ public class Login extends JFrame implements ActionListener {
 
     }
 
+    /**
+     * Authentication boolean.
+     *
+     * @param user     the user
+     * @param password the password
+     * @return the boolean
+     */
     public boolean authentication(final String user, final String password) {
         try {
             final String ROUTE_DB = "jdbc:sqlite:db_teaching_guides.db";
@@ -77,7 +93,6 @@ public class Login extends JFrame implements ActionListener {
 
             boolean authenticated = resultSet.next();
             this.permissionUser = resultSet.getInt("permission");
-            this.user = resultSet.getString("username");
             this.name = resultSet.getString("name");
 
             resultSet.close();
@@ -91,6 +106,10 @@ public class Login extends JFrame implements ActionListener {
         }
     }
 
+    /**
+     * Actions of events
+     * @param e the event to be processed
+     */
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() == aceptButton) {
             final String user = userTextField.getText();
@@ -100,8 +119,6 @@ public class Login extends JFrame implements ActionListener {
                 JOptionPane.showMessageDialog(null, "Complete los campos");
             else {
                 if (authentication(user, password)) {
-                    System.out.println("Valid User, permissions user = " + permissionUser  );
-
                     this.setVisible(false);
                     Menu menu = new Menu(user ,name, permissionUser);
                     menu.setSize(500, 475);

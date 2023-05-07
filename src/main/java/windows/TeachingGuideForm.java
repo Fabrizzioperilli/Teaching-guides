@@ -1,3 +1,9 @@
+/**
+ * @file TeachingGuideForm.java
+ * @author Fabrizzio Daniell Perilli Martin alu0101138589@ull.edu.es
+ * @version 1.0
+ * @date 2023-05-07
+ */
 package windows;
 
 import javax.swing.*;
@@ -6,12 +12,21 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.sql.*;
 
+/**
+ * The type Teaching guide form.
+ */
 public class TeachingGuideForm extends JFrame implements ActionListener {
-    private JButton aceptButton;
-    private JTextArea requiremetTextArea;
-    private JTextArea skillsTextArea;
-    private JTextArea evaluationTextArea;
-    private String subject;
+    private final JButton aceptButton;
+    private final JTextArea requiremetTextArea;
+    private final JTextArea skillsTextArea;
+    private final JTextArea evaluationTextArea;
+    private final String subject;
+
+    /**
+     * Instantiates a new Teaching guide form.
+     *
+     * @param subject the subject
+     */
     public TeachingGuideForm(String subject) {
         super("Edición Guía Docente");
         setLayout(null);
@@ -76,6 +91,10 @@ public class TeachingGuideForm extends JFrame implements ActionListener {
 
     }
 
+    /**
+     * Content the actions of events
+     * @param e the event to be processed
+     */
     public void actionPerformed(ActionEvent e) {
         String requirement = requiremetTextArea.getText();
         String skills = skillsTextArea.getText();
@@ -86,6 +105,13 @@ public class TeachingGuideForm extends JFrame implements ActionListener {
         }
     }
 
+    /**
+     * Query modify teaching guide.
+     *
+     * @param requirement the requirement
+     * @param skills      the skills
+     * @param evaluation  the evaluation
+     */
     public void queryModifyTeachingGuide(String requirement, String skills, String evaluation) {
         try {
             final String ROUTE_DB = "jdbc:sqlite:db_teaching_guides.db";
@@ -106,8 +132,6 @@ public class TeachingGuideForm extends JFrame implements ActionListener {
             updateStatement.setString(3, evaluation);
             updateStatement.setInt(4, id_subject);
 
-            int rowsAffected = updateStatement.executeUpdate();
-
             selectResult.close();
             selectStatement.close();
             updateStatement.close();
@@ -120,6 +144,9 @@ public class TeachingGuideForm extends JFrame implements ActionListener {
         }
     }
 
+    /**
+     * Query teaching guide.
+     */
     public void queryTeachingGuide() {
         final String ROUTE_DB = "jdbc:sqlite:db_teaching_guides.db";
         try {
@@ -161,9 +188,6 @@ public class TeachingGuideForm extends JFrame implements ActionListener {
             ex.printStackTrace();
         }
     }
-
-
-
 
 
 }

@@ -1,3 +1,9 @@
+/**
+ * @file TeachingGuideViewer.java
+ * @author Fabrizzio Daniell Perilli Martin alu0101138589@ull.edu.es
+ * @version 1.0
+ * @date 2023-05-07
+ */
 package windows;
 
 import javax.swing.*;
@@ -5,10 +11,16 @@ import java.awt.*;
 import java.sql.*;
 
 
+/**
+ * The type Teaching guide viewer.
+ */
 public class TeachingGuideViewer extends JFrame {
-    JTextArea resultsTextArea;
-    JScrollPane resultsScrollPane;
 
+    /**
+     * Instantiates a new Teaching guide viewer.
+     *
+     * @param selectedSubject the selected subject
+     */
     public TeachingGuideViewer(String selectedSubject) {
         super("Guía Docente " + selectedSubject);
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
@@ -18,9 +30,9 @@ public class TeachingGuideViewer extends JFrame {
         final String ROUTE_ICON = "resources/images/icon-ull-original.png";
         setIconImage(new ImageIcon(ROUTE_ICON).getImage());
 
-        resultsTextArea = new JTextArea();
+        JTextArea resultsTextArea = new JTextArea();
         resultsTextArea.setEditable(false);
-        resultsScrollPane = new JScrollPane(resultsTextArea);
+        JScrollPane resultsScrollPane = new JScrollPane(resultsTextArea);
         add(resultsScrollPane);
 
         Connection conn = null;
