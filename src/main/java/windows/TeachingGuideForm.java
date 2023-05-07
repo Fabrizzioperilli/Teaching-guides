@@ -132,6 +132,8 @@ public class TeachingGuideForm extends JFrame implements ActionListener {
             updateStatement.setString(3, evaluation);
             updateStatement.setInt(4, id_subject);
 
+            int rowsAffected = updateStatement.executeUpdate();
+
             selectResult.close();
             selectStatement.close();
             updateStatement.close();
@@ -177,6 +179,7 @@ public class TeachingGuideForm extends JFrame implements ActionListener {
             } else {
                 JOptionPane.showMessageDialog(null, "No se encontró una guía docente para esta asignatura.");
             }
+
 
             updateResult.close();
             selectResult.close();

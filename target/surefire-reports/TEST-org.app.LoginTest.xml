@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="2" failures="0" name="org.app.LoginTest" time="0.822" errors="0" skipped="0">
+<testsuite tests="2" failures="0" name="org.app.LoginTest" time="0.808" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
     <property name="java.vm.version" value="11.0.18+10-post-Ubuntu-0ubuntu120.04.1"/>
@@ -42,7 +42,7 @@
     <property name="java.class.path" value="/mnt/c/apache-maven-3.8.6/boot/plexus-classworlds-2.6.0.jar"/>
     <property name="java.vm.specification.version" value="11"/>
     <property name="sun.arch.data.model" value="64"/>
-    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher test"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher package"/>
     <property name="java.home" value="/usr/lib/jvm/java-11-openjdk-amd64"/>
     <property name="user.language" value="en"/>
     <property name="java.specification.vendor" value="Oracle Corporation"/>
@@ -58,6 +58,6 @@
     <property name="sun.cpu.endian" value="little"/>
     <property name="sun.cpu.isalist" value=""/>
   </properties>
-  <testcase classname="org.app.LoginTest" name="testAuthenticationValid" time="0.785"/>
-  <testcase classname="org.app.LoginTest" name="testAuthenticationInvalid" time="0.037"/>
+  <testcase classname="org.app.LoginTest" name="testAuthenticationValid" time="0.768"/>
+  <testcase classname="org.app.LoginTest" name="testAuthenticationInvalid" time="0.04"/>
 </testsuite>
