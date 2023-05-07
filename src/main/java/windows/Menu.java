@@ -147,13 +147,13 @@ public class Menu extends JFrame implements ActionListener {
         if (e.getSource() == searchButton) {
             String selectedSubject = (String) subjetsComboBox.getSelectedItem();
             if (selectedSubject != "Buscar...") {
-                showResultToSearch(selectedSubject);
+                TeachingGuideViewer teachingGuideViewer = new TeachingGuideViewer(selectedSubject);
             }
         }
         if (e.getSource() == modifyButton) {
             String selectedSubjectEditable = (String) subjetsEditableComboBox.getSelectedItem();
             if (selectedSubjectEditable != "Editar...") {
-                FormTeachingGuide formTeachingGuide = new FormTeachingGuide(selectedSubjectEditable);
+                TeachingGuideForm teachingGuideForm = new TeachingGuideForm(selectedSubjectEditable);
             }
         }
     }
@@ -201,63 +201,4 @@ public class Menu extends JFrame implements ActionListener {
         }
         return subjects;
     }
-
-
-    private void showResultToSearch(String selectedSubject) {
-        Connection conn = null;
-        PreparedStatement stmt = null;
-        ResultSet rs = null;
-        try {
-            final String ROUTE_DB = "jdbc:sqlite:db_teaching_guides.db";
-            conn = DriverManager.getConnection(ROUTE_DB);
-
-            String sql = "SELECT * FROM teaching_guide NATURAL JOIN subject WHERE name = ?";
-            stmt = conn.prepareStatement(sql);
-            stmt.setString(1, selectedSubject);
-
-            rs = stmt.executeQuery();
-
-            JFrame resultsFrame = new JFrame("Guia docente (" + selectedSubject + ")");
-            resultsFrame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-            resultsFrame.setSize(1000, 700);
-            resultsFrame.setLocationRelativeTo(null);
-            resultsFrame.setResizable(false);
-            final String ROUTE_ICON = "resources/images/icon-ull-original.png";
-            resultsFrame.setIconImage(new ImageIcon(ROUTE_ICON).getImage());
-
-            JTextArea resultsTextArea = new JTextArea();
-            resultsTextArea.setEditable(false);
-            JScrollPane resultsScrollPane = new JScrollPane(resultsTextArea);
-            resultsFrame.add(resultsScrollPane);
-
-            ResultSetMetaData metaData = rs.getMetaData();
-            int columnCount = metaData.getColumnCount();
-            String[] namesColunms = {"Requisitos", "Competencias", "Evaluación", "Código asignatura", "Nombre", "Curso", "Departamento", "Creditos"};
-            while (rs.next()) {
-                for (int columnIndex = 1; columnIndex <= columnCount; columnIndex++) {
-                    String columnName = metaData.getColumnName(columnIndex);
-                    int indexInNamesColumns = columnIndex - 1;
-                    if (indexInNamesColumns < namesColunms.length) {
-                        columnName = namesColunms[indexInNamesColumns];
-                    }
-                    resultsTextArea.append("---- " + columnName + " ----\n");
-                    resultsTextArea.append(rs.getObject(columnIndex) + "\n\n\n");
-                }
-            }
-            resultsTextArea.setFont((new Font("sans-serif", Font.PLAIN, 16)));
-
-            resultsFrame.setVisible(true);
-        } catch (SQLException ex) {
-            ex.printStackTrace();
-        } finally {
-            try {
-                if (rs != null) rs.close();
-                if (stmt != null) stmt.close();
-                if (conn != null) conn.close();
-            } catch (SQLException ex) {
-                ex.printStackTrace();
-            }
-        }
-    }
-
 }

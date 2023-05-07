@@ -20,10 +20,6 @@ public class Login extends JFrame implements ActionListener {
     private String name;
     private String user;
 
-
-
-
-
     public Login() {
         super("Acceso");
         setLayout(null);

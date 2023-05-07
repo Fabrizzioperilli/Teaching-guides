@@ -6,13 +6,13 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.sql.*;
 
-public class FormTeachingGuide extends JFrame implements ActionListener {
+public class TeachingGuideForm extends JFrame implements ActionListener {
     private JButton aceptButton;
     private JTextArea requiremetTextArea;
     private JTextArea skillsTextArea;
     private JTextArea evaluationTextArea;
     private String subject;
-    public FormTeachingGuide(String subject) {
+    public TeachingGuideForm(String subject) {
         super("Edición Guía Docente");
         setLayout(null);
         setVisible(true);
