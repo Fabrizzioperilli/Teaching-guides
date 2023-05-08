@@ -8,6 +8,7 @@ package windows;
 
 import javax.swing.*;
 import java.awt.*;
+import java.net.URL;
 import java.sql.*;
 
 
@@ -27,7 +28,7 @@ public class TeachingGuideViewer extends JFrame {
         setSize(1000, 700);
         setLocationRelativeTo(null);
         setResizable(true);
-        final String ROUTE_ICON = "resources/images/icon-ull-original.png";
+        final URL ROUTE_ICON = getClass().getResource("/images/icon-ull-original.png");
         setIconImage(new ImageIcon(ROUTE_ICON).getImage());
 
         JTextArea resultsTextArea = new JTextArea();

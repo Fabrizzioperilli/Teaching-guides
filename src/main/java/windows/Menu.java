@@ -10,6 +10,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.net.URL;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -45,7 +46,7 @@ public class Menu extends JFrame implements ActionListener {
         setVisible(true);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         getContentPane().setBackground(new Color(92, 6, 140));
-        final String ROUTE_ICON = "resources/images/icon-ull-original.png";
+        final URL ROUTE_ICON = getClass().getResource("/images/icon-ull-original.png");
         setIconImage(new ImageIcon(ROUTE_ICON).getImage());
 
         JMenuBar menuBar = new JMenuBar();
@@ -82,7 +83,7 @@ public class Menu extends JFrame implements ActionListener {
         usersButton = new JButton();
         usersButton.setBounds(100, 180, 70, 70);
         usersButton.setBackground(new Color(92, 6, 140));
-        final String ROUTE_ICO_USERS = "resources/images/users.png";
+        final URL ROUTE_ICO_USERS = getClass().getResource("/images/users.png");
         usersButton.setIcon(new ImageIcon(ROUTE_ICO_USERS));
         usersButton.addActionListener(this);
         usersButton.setVisible(false);
@@ -91,7 +92,7 @@ public class Menu extends JFrame implements ActionListener {
         searchButton = new JButton();
         searchButton.setBounds(210, 180, 70, 70);
         searchButton.setBackground(new Color(92, 6, 140));
-        final String ROUTE_ICO_SEARCH = "resources/images/search.png";
+        final URL ROUTE_ICO_SEARCH = getClass().getResource("/images/search.png");
         searchButton.setIcon(new ImageIcon(ROUTE_ICO_SEARCH));
         searchButton.addActionListener(this);
         searchButton.setVisible(false);
@@ -100,7 +101,7 @@ public class Menu extends JFrame implements ActionListener {
         modifyButton = new JButton();
         modifyButton.setBounds(320, 180, 70, 70);
         modifyButton.setBackground(new Color(92, 6, 140));
-        final String ROUTE_ICO_MODIFY = "resources/images/pencil.png";
+        final URL ROUTE_ICO_MODIFY = getClass().getResource("/images/pencil.png");
         ImageIcon imageIcon = new ImageIcon(ROUTE_ICO_MODIFY);
         modifyButton.setIcon(imageIcon);
         modifyButton.addActionListener(this);

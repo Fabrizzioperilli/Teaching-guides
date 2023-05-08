@@ -6,6 +6,7 @@
  */
 package windows;
 
+import java.net.URL;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
@@ -32,7 +33,7 @@ public class UsersTable extends JFrame {
         setLocationRelativeTo(null);
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         getContentPane().setBackground(new Color(92, 6, 140));
-        final String ROUTE_ICON = "resources/images/icon-ull-original.png";
+        final URL ROUTE_ICON = getClass().getResource("/images/icon-ull-original.png");
         setIconImage(new ImageIcon(ROUTE_ICON).getImage());
 
         final String ROUTE_DB = "jdbc:sqlite:db_teaching_guides.db";

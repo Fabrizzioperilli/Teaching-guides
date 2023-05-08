@@ -10,6 +10,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.net.URL;
 import java.sql.*;
 
 /**
@@ -35,7 +36,7 @@ public class TeachingGuideForm extends JFrame implements ActionListener {
         setLocationRelativeTo(null);
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         getContentPane().setBackground(new Color(92, 6, 140));
-        final String ROUTE_ICON = "resources/images/icon-ull-original.png";
+        final URL ROUTE_ICON = getClass().getResource("/images/icon-ull-original.png");
         setIconImage(new ImageIcon(ROUTE_ICON).getImage());
 
         this.subject = subject;

@@ -13,6 +13,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.Color;
 import java.awt.Font;
+import java.net.URL;
 import java.sql.*;
 
 /**
@@ -35,10 +36,10 @@ public class Login extends JFrame implements ActionListener {
         setVisible(true);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         getContentPane().setBackground(new Color(92, 6, 140));
-        final String ROUTE_ICON = "resources/images/icon-ull-original.png";
+        final URL ROUTE_ICON = getClass().getResource("/images/icon-ull-original.png");
         setIconImage(new ImageIcon(ROUTE_ICON).getImage());
 
-        final String ROUTE_LOGO = "resources/images/logo-ull.png";
+        final URL ROUTE_LOGO = getClass().getResource("/images/logo-ull.png");
         JLabel logoUll = new JLabel(new ImageIcon(ROUTE_LOGO));
         logoUll.setBounds(25, 5, 450, 200);
         add(logoUll);

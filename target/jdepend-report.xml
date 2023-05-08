@@ -1,0 +1,130 @@
+<?xml version="1.0"?>
+<JDepend>
+    <Packages>
+
+        <Package name="java.awt">
+            <error>No stats available: package referenced, but not analyzed.</error>
+        </Package>
+
+        <Package name="java.awt.event">
+            <error>No stats available: package referenced, but not analyzed.</error>
+        </Package>
+
+        <Package name="java.io">
+            <error>No stats available: package referenced, but not analyzed.</error>
+        </Package>
+
+        <Package name="java.lang">
+            <error>No stats available: package referenced, but not analyzed.</error>
+        </Package>
+
+        <Package name="java.net">
+            <error>No stats available: package referenced, but not analyzed.</error>
+        </Package>
+
+        <Package name="java.sql">
+            <error>No stats available: package referenced, but not analyzed.</error>
+        </Package>
+
+        <Package name="java.util">
+            <error>No stats available: package referenced, but not analyzed.</error>
+        </Package>
+
+        <Package name="javax.swing">
+            <error>No stats available: package referenced, but not analyzed.</error>
+        </Package>
+
+        <Package name="javax.swing.table">
+            <error>No stats available: package referenced, but not analyzed.</error>
+        </Package>
+
+        <Package name="org.app">
+            <Stats>
+                <TotalClasses>2</TotalClasses>
+                <ConcreteClasses>2</ConcreteClasses>
+                <AbstractClasses>0</AbstractClasses>
+                <Ca>0</Ca>
+                <Ce>3</Ce>
+                <A>0</A>
+                <I>1</I>
+                <D>0</D>
+                <V>1</V>
+            </Stats>
+
+            <AbstractClasses>
+            </AbstractClasses>
+
+            <ConcreteClasses>
+                <Class sourceFile="App.java">
+                    org.app.App
+                </Class>
+                <Class sourceFile="App.java">
+                    org.app.App$1
+                </Class>
+            </ConcreteClasses>
+
+            <DependsUpon>
+                <Package>java.lang</Package>
+                <Package>javax.swing</Package>
+                <Package>windows</Package>
+            </DependsUpon>
+
+            <UsedBy>
+            </UsedBy>
+        </Package>
+
+        <Package name="windows">
+            <Stats>
+                <TotalClasses>5</TotalClasses>
+                <ConcreteClasses>5</ConcreteClasses>
+                <AbstractClasses>0</AbstractClasses>
+                <Ca>1</Ca>
+                <Ce>9</Ce>
+                <A>0</A>
+                <I>0.9</I>
+                <D>0.1</D>
+                <V>1</V>
+            </Stats>
+
+            <AbstractClasses>
+            </AbstractClasses>
+
+            <ConcreteClasses>
+                <Class sourceFile="Login.java">
+                    windows.Login
+                </Class>
+                <Class sourceFile="Menu.java">
+                    windows.Menu
+                </Class>
+                <Class sourceFile="TeachingGuideForm.java">
+                    windows.TeachingGuideForm
+                </Class>
+                <Class sourceFile="TeachingGuideViewer.java">
+                    windows.TeachingGuideViewer
+                </Class>
+                <Class sourceFile="UsersTable.java">
+                    windows.UsersTable
+                </Class>
+            </ConcreteClasses>
+
+            <DependsUpon>
+                <Package>java.awt</Package>
+                <Package>java.awt.event</Package>
+                <Package>java.io</Package>
+                <Package>java.lang</Package>
+                <Package>java.net</Package>
+                <Package>java.sql</Package>
+                <Package>java.util</Package>
+                <Package>javax.swing</Package>
+                <Package>javax.swing.table</Package>
+            </DependsUpon>
+
+            <UsedBy>
+                <Package>org.app</Package>
+            </UsedBy>
+        </Package>
+    </Packages>
+
+    <Cycles>
+    </Cycles>
+</JDepend>
