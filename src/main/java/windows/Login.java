@@ -84,7 +84,7 @@ public class Login extends JFrame implements ActionListener {
      */
     public boolean authentication(final String user, final String password) {
         try {
-            final String ROUTE_DB = "jdbc:sqlite:db_teaching_guides.db";
+            final String ROUTE_DB = "jdbc:sqlite:src/main/resources/database/db_teaching_guides.db";
             Connection connection = DriverManager.getConnection(ROUTE_DB);
             PreparedStatement sqlQuery = connection.prepareStatement("SELECT * FROM teacher WHERE username = ? AND password = ?");
             sqlQuery.setString(1, user);

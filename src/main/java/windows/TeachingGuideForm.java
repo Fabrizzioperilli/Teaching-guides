@@ -115,7 +115,7 @@ public class TeachingGuideForm extends JFrame implements ActionListener {
      */
     public void queryModifyTeachingGuide(String requirement, String skills, String evaluation) {
         try {
-            final String ROUTE_DB = "jdbc:sqlite:db_teaching_guides.db";
+            final String ROUTE_DB = "jdbc:sqlite:src/main/resources/database/db_teaching_guides.db";
             Connection connection = DriverManager.getConnection(ROUTE_DB);
 
             // Consulta para obtener el ID de la asignatura por nombre
@@ -151,7 +151,7 @@ public class TeachingGuideForm extends JFrame implements ActionListener {
      * Query teaching guide.
      */
     public void queryTeachingGuide() {
-        final String ROUTE_DB = "jdbc:sqlite:db_teaching_guides.db";
+        final String ROUTE_DB = "jdbc:sqlite:src/main/resources/database/db_teaching_guides.db";
         try {
             Connection connection = DriverManager.getConnection(ROUTE_DB);
 

@@ -36,7 +36,7 @@ public class UsersTable extends JFrame {
         final URL ROUTE_ICON = getClass().getResource("/images/icon-ull-original.png");
         setIconImage(new ImageIcon(ROUTE_ICON).getImage());
 
-        final String ROUTE_DB = "jdbc:sqlite:db_teaching_guides.db";
+        final String ROUTE_DB = "jdbc:sqlite:src/main/resources/database/db_teaching_guides.db";
         Connection con = null;
         Statement stmt = null;
         ResultSet rs = null;

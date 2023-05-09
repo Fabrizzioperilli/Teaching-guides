@@ -183,7 +183,7 @@ public class Menu extends JFrame implements ActionListener {
     private List<String> getSubjectList() {
         List<String> subjects = new ArrayList<String>();
         try {
-            final String ROUTE_DB = "jdbc:sqlite:db_teaching_guides.db";
+            final String ROUTE_DB = "jdbc:sqlite:src/main/resources/database/db_teaching_guides.db";
             Connection connection = DriverManager.getConnection(ROUTE_DB);
             PreparedStatement sqlQuery = connection.prepareStatement("SELECT name FROM subject");
 
@@ -208,7 +208,7 @@ public class Menu extends JFrame implements ActionListener {
     private List<String> getSubjectListEditable() {
         List<String> subjects = new ArrayList<String>();
         try {
-            final String ROUTE_DB = "jdbc:sqlite:db_teaching_guides.db";
+            final String ROUTE_DB = "jdbc:sqlite:src/main/resources/database/db_teaching_guides.db";
             Connection connection = DriverManager.getConnection(ROUTE_DB);
             PreparedStatement sqlQuery = connection.prepareStatement("SELECT name FROM subject NATURAL JOIN teachingGuide_teacher WHERE username = ?");
             sqlQuery.setString(1, userName);

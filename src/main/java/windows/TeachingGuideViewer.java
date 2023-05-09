@@ -40,7 +40,7 @@ public class TeachingGuideViewer extends JFrame {
         PreparedStatement stmt = null;
         ResultSet rs = null;
         try {
-            final String ROUTE_DB = "jdbc:sqlite:db_teaching_guides.db";
+            final String ROUTE_DB = "jdbc:sqlite:src/main/resources/database/db_teaching_guides.db";
             conn = DriverManager.getConnection(ROUTE_DB);
 
             String sql = "SELECT * FROM teaching_guide NATURAL JOIN subject WHERE name = ?";
