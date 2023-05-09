@@ -39,7 +39,7 @@ coordinador de la asignatura.
 ---
 
 ## Requistos
-El proyecto está desarrollado en Java 11, por lo que es necesario tener instalado JDK 11 
+El proyecto está desarrollado en Java 11, por lo que es necesario tener instalado ``jdk-11.0.16.101``
 o superior en tu sistema operativo para poder utilizar el programa, para comprobar la versión
 de Java que tienes instalado puedes usar el siguiente comando: ```java --version```, para más
 información pulsa [aquí. ](https://www.oracle.com/uk/java/technologies/javase/jdk11-archive-downloads.html) 
