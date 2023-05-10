@@ -34,7 +34,9 @@ public class Login extends JFrame implements ActionListener {
         super("Acceso");
         setLayout(null);
         setVisible(true);
+        setResizable(false);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
         getContentPane().setBackground(new Color(92, 6, 140));
         final URL ROUTE_ICON = getClass().getResource("/images/icon-ull-original.png");
         setIconImage(new ImageIcon(ROUTE_ICON).getImage());
@@ -56,7 +58,7 @@ public class Login extends JFrame implements ActionListener {
         add(userTextField);
 
         JLabel passwordLabel = new JLabel("Contraseña: ");
-        passwordLabel.setBounds(90, 300, 100, 30);
+        passwordLabel.setBounds(90, 300, 200, 30);
         passwordLabel.setForeground(Color.WHITE);
         passwordLabel.setFont(new Font("sans-serif", Font.BOLD, 15));
         add(passwordLabel);
@@ -123,11 +125,9 @@ public class Login extends JFrame implements ActionListener {
                     this.setVisible(false);
                     Menu menu = new Menu(user ,name, permissionUser);
                     menu.setSize(500, 475);
-                    menu.setResizable(false);
                     menu.setLocationRelativeTo(null);
-                } else {
+                } else
                     JOptionPane.showMessageDialog(null, "Usuario incorrecto");
-                }
             }
         }
     }

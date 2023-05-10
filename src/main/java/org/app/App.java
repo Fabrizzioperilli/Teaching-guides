@@ -28,7 +28,6 @@ public class App {
             public void run() {
                 Login frame = new Login();
                 frame.setSize(500, 550);
-                frame.setResizable(false);
                 frame.setLocationRelativeTo(null);
             }
         });

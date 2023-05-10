@@ -24,10 +24,9 @@ public class TeachingGuideViewer extends JFrame {
      */
     public TeachingGuideViewer(String selectedSubject) {
         super("Guía Docente " + selectedSubject);
-        setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-        setSize(1000, 700);
-        setLocationRelativeTo(null);
         setResizable(true);
+        setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+
         final URL ROUTE_ICON = getClass().getResource("/images/icon-ull-original.png");
         setIconImage(new ImageIcon(ROUTE_ICON).getImage());
 

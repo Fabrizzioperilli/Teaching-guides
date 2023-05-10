@@ -32,17 +32,17 @@ public class TeachingGuideForm extends JFrame implements ActionListener {
         super("Edición Guía Docente");
         setLayout(null);
         setVisible(true);
-        setSize(850, 750);
-        setLocationRelativeTo(null);
+        setResizable(false);
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+
         getContentPane().setBackground(new Color(92, 6, 140));
         final URL ROUTE_ICON = getClass().getResource("/images/icon-ull-original.png");
         setIconImage(new ImageIcon(ROUTE_ICON).getImage());
 
         this.subject = subject;
 
-        JLabel title = new JLabel("Edición guía docente: " + subject);
-        title.setBounds(300, 20, 400, 30);
+        JLabel title = new JLabel("Edición guía docente:  " + subject);
+        title.setBounds(50, 20, 700, 30);
         title.setForeground(Color.WHITE);
         title.setFont(new Font("Andale Mono", Font.BOLD, 20));
         add(title);

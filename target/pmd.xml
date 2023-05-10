@@ -1,19 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<pmd xmlns="http://pmd.sourceforge.net/report/2.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://pmd.sourceforge.net/report/2.0.0 http://pmd.sourceforge.net/report_2_0_0.xsd" version="6.49.0" timestamp="2023-05-09T01:11:35.353">
+<pmd xmlns="http://pmd.sourceforge.net/report/2.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://pmd.sourceforge.net/report/2.0.0 http://pmd.sourceforge.net/report_2_0_0.xsd" version="6.49.0" timestamp="2023-05-10T17:39:48.111">
 <file name="/mnt/c/Users/fabri/Documents/Fabrizzio/Universidad/5_curso/MSS/Java/Teaching_guides/src/main/java/windows/Login.java">
-<violation beginline="93" endline="93" begincolumn="13" endcolumn="57" rule="CheckResultSet" ruleset="Best Practices" package="windows" class="Login" method="authentication" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.49.0/pmd_rules_java_bestpractices.html#checkresultset" priority="3">
+<violation beginline="95" endline="95" begincolumn="13" endcolumn="57" rule="CheckResultSet" ruleset="Best Practices" package="windows" class="Login" method="authentication" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.49.0/pmd_rules_java_bestpractices.html#checkresultset" priority="3">
 Always check the return of one of the navigation method (next,previous,first,last) of a ResultSet.
-</violation>
-</file>
-<file name="/mnt/c/Users/fabri/Documents/Fabrizzio/Universidad/5_curso/MSS/Java/Teaching_guides/src/main/java/windows/Menu.java">
-<violation beginline="163" endline="163" begincolumn="24" endcolumn="33" rule="UnusedLocalVariable" ruleset="Best Practices" package="windows" class="Menu" method="actionPerformed" variable="usersTable" externalInfoUrl="https://pmd.github.io/pmd-6.49.0/pmd_rules_java_bestpractices.html#unusedlocalvariable" priority="3">
-Avoid unused local variables such as 'usersTable'.
-</violation>
-<violation beginline="168" endline="168" begincolumn="37" endcolumn="55" rule="UnusedLocalVariable" ruleset="Best Practices" package="windows" class="Menu" method="actionPerformed" variable="teachingGuideViewer" externalInfoUrl="https://pmd.github.io/pmd-6.49.0/pmd_rules_java_bestpractices.html#unusedlocalvariable" priority="3">
-Avoid unused local variables such as 'teachingGuideViewer'.
-</violation>
-<violation beginline="174" endline="174" begincolumn="35" endcolumn="51" rule="UnusedLocalVariable" ruleset="Best Practices" package="windows" class="Menu" method="actionPerformed" variable="teachingGuideForm" externalInfoUrl="https://pmd.github.io/pmd-6.49.0/pmd_rules_java_bestpractices.html#unusedlocalvariable" priority="3">
-Avoid unused local variables such as 'teachingGuideForm'.
 </violation>
 </file>
 <file name="/mnt/c/Users/fabri/Documents/Fabrizzio/Universidad/5_curso/MSS/Java/Teaching_guides/src/main/java/windows/TeachingGuideForm.java">
@@ -22,7 +11,7 @@ Avoid unused local variables such as 'rowsAffected'.
 </violation>
 </file>
 <file name="/mnt/c/Users/fabri/Documents/Fabrizzio/Universidad/5_curso/MSS/Java/Teaching_guides/src/main/java/windows/TeachingGuideViewer.java">
-<violation beginline="66" endline="66" begincolumn="38" endcolumn="75" rule="UselessParentheses" ruleset="Code Style" package="windows" class="TeachingGuideViewer" method="TeachingGuideViewer" externalInfoUrl="https://pmd.github.io/pmd-6.49.0/pmd_rules_java_codestyle.html#uselessparentheses" priority="4">
+<violation beginline="65" endline="65" begincolumn="38" endcolumn="75" rule="UselessParentheses" ruleset="Code Style" package="windows" class="TeachingGuideViewer" method="TeachingGuideViewer" externalInfoUrl="https://pmd.github.io/pmd-6.49.0/pmd_rules_java_codestyle.html#uselessparentheses" priority="4">
 Useless parentheses.
 </violation>
 </file>

@@ -17,7 +17,7 @@
 -docencoding
 'UTF-8'
 -doctitle
-'Teaching_guides 1.0-SNAPSHOT Test API'
+'Teaching_guides 1.0 Test API'
 -link
 '../apidocs'
 -linkoffline
@@ -25,26 +25,26 @@
 -use
 -version
 -windowtitle
-'Teaching_guides 1.0-SNAPSHOT Test API'
+'Teaching_guides 1.0 Test API'
 org.app
 /mnt/c/Users/fabri/Documents/Fabrizzio/Universidad/5_curso/MSS/Java/Teaching_guides/src/test/java = 1683024288175
-/mnt/c/Users/fabri/Documents/Fabrizzio/Universidad/5_curso/MSS/Java/Teaching_guides/target/site/testapidocs/allclasses-index.html = 1683591104540
-/mnt/c/Users/fabri/Documents/Fabrizzio/Universidad/5_curso/MSS/Java/Teaching_guides/target/site/testapidocs/allclasses.html = 1683591104579
-/mnt/c/Users/fabri/Documents/Fabrizzio/Universidad/5_curso/MSS/Java/Teaching_guides/target/site/testapidocs/allpackages-index.html = 1683591104552
-/mnt/c/Users/fabri/Documents/Fabrizzio/Universidad/5_curso/MSS/Java/Teaching_guides/target/site/testapidocs/constant-values.html = 1683591104431
-/mnt/c/Users/fabri/Documents/Fabrizzio/Universidad/5_curso/MSS/Java/Teaching_guides/target/site/testapidocs/deprecated-list.html = 1683591104571
-/mnt/c/Users/fabri/Documents/Fabrizzio/Universidad/5_curso/MSS/Java/Teaching_guides/target/site/testapidocs/element-list = 1683591104372
-/mnt/c/Users/fabri/Documents/Fabrizzio/Universidad/5_curso/MSS/Java/Teaching_guides/target/site/testapidocs/help-doc.html = 1683591104601
-/mnt/c/Users/fabri/Documents/Fabrizzio/Universidad/5_curso/MSS/Java/Teaching_guides/target/site/testapidocs/index-all.html = 1683591104530
-/mnt/c/Users/fabri/Documents/Fabrizzio/Universidad/5_curso/MSS/Java/Teaching_guides/target/site/testapidocs/index.html = 1683591104592
-/mnt/c/Users/fabri/Documents/Fabrizzio/Universidad/5_curso/MSS/Java/Teaching_guides/target/site/testapidocs/jquery-ui.overrides.css = 1683591104739
-/mnt/c/Users/fabri/Documents/Fabrizzio/Universidad/5_curso/MSS/Java/Teaching_guides/target/site/testapidocs/member-search-index.js = 1683591104522
-/mnt/c/Users/fabri/Documents/Fabrizzio/Universidad/5_curso/MSS/Java/Teaching_guides/target/site/testapidocs/member-search-index.zip = 1683591104526
-/mnt/c/Users/fabri/Documents/Fabrizzio/Universidad/5_curso/MSS/Java/Teaching_guides/target/site/testapidocs/overview-tree.html = 1683591104485
-/mnt/c/Users/fabri/Documents/Fabrizzio/Universidad/5_curso/MSS/Java/Teaching_guides/target/site/testapidocs/package-search-index.js = 1683591104504
-/mnt/c/Users/fabri/Documents/Fabrizzio/Universidad/5_curso/MSS/Java/Teaching_guides/target/site/testapidocs/package-search-index.zip = 1683591104511
-/mnt/c/Users/fabri/Documents/Fabrizzio/Universidad/5_curso/MSS/Java/Teaching_guides/target/site/testapidocs/script.js = 1683591104616
-/mnt/c/Users/fabri/Documents/Fabrizzio/Universidad/5_curso/MSS/Java/Teaching_guides/target/site/testapidocs/search.js = 1683591104622
-/mnt/c/Users/fabri/Documents/Fabrizzio/Universidad/5_curso/MSS/Java/Teaching_guides/target/site/testapidocs/stylesheet.css = 1683591104612
-/mnt/c/Users/fabri/Documents/Fabrizzio/Universidad/5_curso/MSS/Java/Teaching_guides/target/site/testapidocs/type-search-index.js = 1683591104515
-/mnt/c/Users/fabri/Documents/Fabrizzio/Universidad/5_curso/MSS/Java/Teaching_guides/target/site/testapidocs/type-search-index.zip = 1683591104519
+/mnt/c/Users/fabri/Documents/Fabrizzio/Universidad/5_curso/MSS/Java/Teaching_guides/target/site/testapidocs/allclasses-index.html = 1683736800602
+/mnt/c/Users/fabri/Documents/Fabrizzio/Universidad/5_curso/MSS/Java/Teaching_guides/target/site/testapidocs/allclasses.html = 1683736800658
+/mnt/c/Users/fabri/Documents/Fabrizzio/Universidad/5_curso/MSS/Java/Teaching_guides/target/site/testapidocs/allpackages-index.html = 1683736800617
+/mnt/c/Users/fabri/Documents/Fabrizzio/Universidad/5_curso/MSS/Java/Teaching_guides/target/site/testapidocs/constant-values.html = 1683736800355
+/mnt/c/Users/fabri/Documents/Fabrizzio/Universidad/5_curso/MSS/Java/Teaching_guides/target/site/testapidocs/deprecated-list.html = 1683736800643
+/mnt/c/Users/fabri/Documents/Fabrizzio/Universidad/5_curso/MSS/Java/Teaching_guides/target/site/testapidocs/element-list = 1683736800233
+/mnt/c/Users/fabri/Documents/Fabrizzio/Universidad/5_curso/MSS/Java/Teaching_guides/target/site/testapidocs/help-doc.html = 1683736800718
+/mnt/c/Users/fabri/Documents/Fabrizzio/Universidad/5_curso/MSS/Java/Teaching_guides/target/site/testapidocs/index-all.html = 1683736800582
+/mnt/c/Users/fabri/Documents/Fabrizzio/Universidad/5_curso/MSS/Java/Teaching_guides/target/site/testapidocs/index.html = 1683736800678
+/mnt/c/Users/fabri/Documents/Fabrizzio/Universidad/5_curso/MSS/Java/Teaching_guides/target/site/testapidocs/jquery-ui.overrides.css = 1683736801047
+/mnt/c/Users/fabri/Documents/Fabrizzio/Universidad/5_curso/MSS/Java/Teaching_guides/target/site/testapidocs/member-search-index.js = 1683736800557
+/mnt/c/Users/fabri/Documents/Fabrizzio/Universidad/5_curso/MSS/Java/Teaching_guides/target/site/testapidocs/member-search-index.zip = 1683736800566
+/mnt/c/Users/fabri/Documents/Fabrizzio/Universidad/5_curso/MSS/Java/Teaching_guides/target/site/testapidocs/overview-tree.html = 1683736800484
+/mnt/c/Users/fabri/Documents/Fabrizzio/Universidad/5_curso/MSS/Java/Teaching_guides/target/site/testapidocs/package-search-index.js = 1683736800517
+/mnt/c/Users/fabri/Documents/Fabrizzio/Universidad/5_curso/MSS/Java/Teaching_guides/target/site/testapidocs/package-search-index.zip = 1683736800529
+/mnt/c/Users/fabri/Documents/Fabrizzio/Universidad/5_curso/MSS/Java/Teaching_guides/target/site/testapidocs/script.js = 1683736800753
+/mnt/c/Users/fabri/Documents/Fabrizzio/Universidad/5_curso/MSS/Java/Teaching_guides/target/site/testapidocs/search.js = 1683736800771
+/mnt/c/Users/fabri/Documents/Fabrizzio/Universidad/5_curso/MSS/Java/Teaching_guides/target/site/testapidocs/stylesheet.css = 1683736800736
+/mnt/c/Users/fabri/Documents/Fabrizzio/Universidad/5_curso/MSS/Java/Teaching_guides/target/site/testapidocs/type-search-index.js = 1683736800538
+/mnt/c/Users/fabri/Documents/Fabrizzio/Universidad/5_curso/MSS/Java/Teaching_guides/target/site/testapidocs/type-search-index.zip = 1683736800548

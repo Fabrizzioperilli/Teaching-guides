@@ -44,7 +44,9 @@ public class Menu extends JFrame implements ActionListener {
         super("Menu");
         setLayout(null);
         setVisible(true);
+        setResizable(false);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
         getContentPane().setBackground(new Color(92, 6, 140));
         final URL ROUTE_ICON = getClass().getResource("/images/icon-ull-original.png");
         setIconImage(new ImageIcon(ROUTE_ICON).getImage());
@@ -152,8 +154,7 @@ public class Menu extends JFrame implements ActionListener {
         if (e.getSource() == itemMenuBack) {
             this.setVisible(false);
             Login login = new Login();
-            login.setSize(500, 600);
-            login.setResizable(false);
+            login.setSize(500, 550);
             login.setLocationRelativeTo(null);
         }
         if (e.getSource() == itemMenuExit) {
@@ -161,17 +162,23 @@ public class Menu extends JFrame implements ActionListener {
         }
         if (e.getSource() == usersButton) {
             UsersTable usersTable = new UsersTable();
+            usersTable.setSize(620, 360);
+            usersTable.setLocationRelativeTo(null);
         }
         if (e.getSource() == searchButton) {
             String selectedSubject = (String) subjetsComboBox.getSelectedItem();
             if (selectedSubject != "Buscar...") {
                 TeachingGuideViewer teachingGuideViewer = new TeachingGuideViewer(selectedSubject);
+                teachingGuideViewer.setSize(1000, 700);
+                teachingGuideViewer.setLocationRelativeTo(null);
             }
         }
         if (e.getSource() == modifyButton) {
             String selectedSubjectEditable = (String) subjetsEditableComboBox.getSelectedItem();
             if (selectedSubjectEditable != "Editar...") {
                 TeachingGuideForm teachingGuideForm = new TeachingGuideForm(selectedSubjectEditable);
+                teachingGuideForm.setSize(850, 750);
+                teachingGuideForm.setLocationRelativeTo(null);
             }
         }
     }

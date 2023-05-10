@@ -29,9 +29,10 @@ public class UsersTable extends JFrame {
         super("Usuarios del sistema");
         setLayout(null);
         setVisible(true);
-        setSize(620, 360);
+        setResizable(false);
         setLocationRelativeTo(null);
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+
         getContentPane().setBackground(new Color(92, 6, 140));
         final URL ROUTE_ICON = getClass().getResource("/images/icon-ull-original.png");
         setIconImage(new ImageIcon(ROUTE_ICON).getImage());

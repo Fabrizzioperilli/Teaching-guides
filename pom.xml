@@ -4,7 +4,7 @@
 
     <groupId>org.app</groupId>
     <artifactId>Teaching_guides</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>1.0</version>
     <packaging>jar</packaging>
 
     <name>Teaching_guides</name>
@@ -26,7 +26,6 @@
             <artifactId>sqlite-jdbc</artifactId>
             <version>3.40.1.0</version>
         </dependency>
-
     </dependencies>
 
     <build>
@@ -116,12 +115,13 @@
                 <artifactId>maven-surefire-report-plugin</artifactId>
                 <version>3.0.0-M7</version>
             </plugin>
-            <!-- JDepend -->
+            <!-- Plugin JDepend -->
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>jdepend-maven-plugin</artifactId>
                 <version>2.0</version>
             </plugin>
+            <!-- Plugin JavaDoc-->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-javadoc-plugin</artifactId>

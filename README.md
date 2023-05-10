@@ -7,26 +7,26 @@ El siguiente programa en Java es un sistema para poder acceder a
 las guías docentes de las asignaturas que se imparten en la Universidad de la Laguna. También
 se pueden realizar modificaciones en las guías docentes, dependiendo de los permisos que
 disponga el usuario al iniciar sesión en la aplicación. Todos los datos están almacenados en 
-una base de datos SQLite ```/src/main/resources/database/db_teaching_guide.db```, se estable una conexión para recuperar 
+una base de datos SQLite ```/src/main/resources/database/db_teaching_guide.db```, se establece una conexión para recuperar 
 la información y mostrarla al usuario.
 
 ---
 ## Funcionamiento
 
 Para poder utilizar la aplicación debes ubicarte en la raíz del proyecto y buscar el siguiente fichero:
-````/Teaching_guides-1.0-SNAPSHOT.jar````, puedes  abrir una consola y ejecutar el siguiente comando: ````java -jar Teaching_guides-1.0-SNAPSHOT.jar````,
+````/Teaching_guides-1.0.jar````, puedes  abrir una consola y ejecutar el siguiente comando: ````java -jar Teaching_guides-1.0.jar````,
 si estás usando Windows puedes abrirlo directamente desde el explorador de archivos.
 
 Como se mencionó anteriormente para poder iniciar sesión se necesitan unas credenciales, por tanto
 se dispone de una lista de usuarios con acceso al sistema:
 
 | Usuario | Contraseña | Permisos |
-|---------|-----------|----------|
-| admin   | admin     | 0        |
-| user1   | user1     | 1        |
-| user11  | user11    | 1        |
-| user2   | user2     | 2        |
-| user22  | user22    | 2        |
+|---------|------------|----------|
+| admin   | admin      | 0        |
+| user1   | user1      | 1        |
+| user11  | user11     | 1        |
+| user2   | user2      | 2        |
+| user22  | user22     | 2        |
 
 Los permisos de los usuarios dependen del rol de cada uno:
 
@@ -47,7 +47,7 @@ información pulsa [aquí. ](https://www.oracle.com/uk/java/technologies/javase/
 También es importante mencionar que el proyecto fue desarrollado con Maven, 
 es una herramienta de gestión de proyectos y construcción de software ampliamente utilizada en el desarrollo de aplicaciones Java.
 Si deseas compilar y ejecutar el proyecto es de gran utilidad tener Maven instalado en tu sistema, 
-puedes usar el siguiente comando para comprobar si lo tienes instalado: ```java --version```,
+puedes usar el siguiente comando para comprobar si lo tienes instalado: ```mvn --version```,
 para más información pulsa [aquí.](https://maven.apache.org/download.cgi)
 
 Con Maven puedes usar los siguientes comandos en el directorio raíz del proyecto 
