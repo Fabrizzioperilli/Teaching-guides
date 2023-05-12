@@ -124,8 +124,6 @@ public class Login extends JFrame implements ActionListener {
                 if (authentication(user, password)) {
                     this.setVisible(false);
                     Menu menu = new Menu(user ,name, permissionUser);
-                    menu.setSize(500, 475);
-                    menu.setLocationRelativeTo(null);
                 } else
                     JOptionPane.showMessageDialog(null, "Usuario incorrecto");
             }

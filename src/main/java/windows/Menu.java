@@ -31,7 +31,7 @@ public class Menu extends JFrame implements ActionListener {
     private final JMenuItem itemMenuExit;
     private final JComboBox subjetsComboBox;
     private final JComboBox subjetsEditableComboBox;
-
+qq
 
     /**
      * Instantiates a new Menu.
@@ -45,6 +45,8 @@ public class Menu extends JFrame implements ActionListener {
         setLayout(null);
         setVisible(true);
         setResizable(false);
+        setSize(500, 475);
+        setLocationRelativeTo(null);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
         getContentPane().setBackground(new Color(92, 6, 140));
